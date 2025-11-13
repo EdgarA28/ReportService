@@ -100,7 +100,7 @@ public class ReportService
         // 4 Generate Report
         GenerateReportFile(year, month, totalUSD);
 
-        Console.WriteLine("Report generated successfully.");
+        Console.WriteLine("Bericht erfolgreich erstellt.");
     }
 
     // Helper Methods
@@ -171,8 +171,7 @@ public class ReportService
         {
             $"Monatlicher Verkaufsbericht {month}/{year}",
             "-------------------------------------",
-            // Use format specifier for better control over the total number's appearance
-            $"Gesamt Umsatz in USD: {total:N2}" 
+            $"Gesamt Umsatz in USD: {total}" 
         };
 
         string fileName = string.Format(REPORT_FILE_FORMAT, year, month);

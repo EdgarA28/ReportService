@@ -12,3 +12,4 @@
 /home/edgar/c#/myApp/obj/Debug/net9.0/myApp.pdb
 /home/edgar/c#/myApp/obj/Debug/net9.0/myApp.genruntimeconfig.cache
 /home/edgar/c#/myApp/obj/Debug/net9.0/ref/myApp.dll
+/home/edgar/c#/myApp/obj/Debug/net9.0/myApp.sourcelink.json
