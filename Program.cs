@@ -11,7 +11,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("--- Sales Report Generator ---");
+        Console.WriteLine("--- Generator für Verkaufsberichte ---");
 
         // Inicializing year and month to 0 and get the values from the user in terminal
         int targetYear = 0;
@@ -19,7 +19,7 @@ public class Program
 
         while (targetYear == 0)
         {
-            Console.Write("Please enter the year for the report: ");
+            Console.Write("Bitte geben Sie das Jahr für den Bericht ein: ");
             string yearInput = Console.ReadLine();
 
             if (int.TryParse(yearInput, out int year) && year > 1900 && year <= DateTime.Now.Year + 1)
@@ -28,12 +28,12 @@ public class Program
             }
             else
             {
-                Console.WriteLine("Invalid year. Please enter a valid four-digit year.");
+                Console.WriteLine("Ungültiges Jahr. Bitte geben Sie ein gültiges vierstelliges Jahr ein.");
             }
         }
         while (targetMonth == 0)
         {
-            Console.Write("Please enter the month for the report (1-12): ");
+            Console.Write("Bitte geben Sie den Monat für den Bericht ein (1-12): ");
             string monthInput = Console.ReadLine();
 
             if (int.TryParse(monthInput, out int month) && month >= 1 && month <= 12)
@@ -42,10 +42,10 @@ public class Program
             }
             else
             {
-                Console.WriteLine("Invalid month. Please enter a number between 1 and 12.");
+                Console.WriteLine("Ungültiger Monat. Bitte geben Sie eine Zahl zwischen 1 und 12 ein.");
             }
         }
-        //Add a try-catch to detect errrors on reportService
+        //tTry-catch to detect errrors on reportService
         try
         {
             var reportService = new ReportService();
@@ -127,12 +127,12 @@ public class ReportService
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine($"Error: Sales file '{filePath}' not found.");
+            Console.WriteLine($"Fehler: Die Verkaufsdatei '{filePath}' wurde nicht gefunden.");
             return new List<SaleObject>();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error loading sales data: {ex.Message}");
+            Console.WriteLine($"Fehler beim Laden der Verkaufsdaten:{ex.Message}");
             return new List<SaleObject>();
         }
     }
